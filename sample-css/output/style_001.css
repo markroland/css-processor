@@ -1,0 +1,272 @@
+/* Begin yahoo-reset.css */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+fieldset,img { 
+	border:0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+ol,ul {
+	list-style:none;
+}
+
+caption,th {
+	text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+
+q:before,q:after {
+	content:''
+}
+
+abbr,acronym {
+	border:0;
+}
+
+/* End yahoo-reset.css */
+
+/* Begin clearfix.css */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* End clearfix.css */
+
+/* Begin plain-html.css */
+
+body{
+	background-color: transparent;
+	background-image: url('/assets/images/bg_body_noise.png');
+	color: #000;
+	font-family: 'Times New Roman', Times, Serif;
+	-webkit-text-size-adjust: none;
+}
+
+a,
+a:link,
+a:visited{
+	color: #27A6F7;
+	text-decoration: none;
+}
+
+a:hover,
+a:active{
+	color: #6CBEEF;
+}
+
+h1{
+	font-size: 2em;
+	line-height: 1em;
+	margin-bottom: 1em;
+	font-family: Futura, Helvetica, Sans-serif;
+	text-shadow: 0px 1px 0px #CCC;
+}
+
+h1 a{
+	color: #000 !important;
+}
+
+h2{
+	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 1em;
+	margin-bottom: 1em;
+}
+
+h3{
+	font-weight: bold;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+h4{
+	font-weight: bold;
+}
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+strong em{
+	font-weight: bold;
+	font-style: italic;
+}
+
+p{
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+ol, ul{
+	list-style-position: inside;
+	padding-left: 1em;
+	margin-bottom: 1.5em;
+}
+
+ol{
+	list-style-type: decimal;
+}
+
+ul{
+	list-style-type: disc;
+}
+
+/* End plain-html.css */
+
+/* Begin cmxforms.css */
+
+/**********************************
+
+Use: cmxform template
+Author: Nick Rigby
+
+URL: //www.alistapart.com/d/prettyaccessibleforms/example_3/assets/css/_library/cmxform.css
+
+Last Accessed: 12/30/2012
+
+***********************************/
+
+form.cmxform fieldset { margin-bottom: 10px; }
+	
+form.cmxform legend {
+	padding: 0 2px;
+	font-weight: bold;
+	_margin: 0 -7px; /* IE Win */
+	}
+	
+form.cmxform label {
+	display: inline-block;
+	line-height: 1.8;
+	vertical-align: top;
+	}
+	
+form.cmxform fieldset ol {
+	margin: 0;
+	padding: 0;
+	}
+	
+form.cmxform fieldset li {
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+	}
+	
+form.cmxform fieldset fieldset {
+	border: none;
+	margin: 3px 0 0;
+	}
+	
+form.cmxform fieldset fieldset legend {
+	padding: 0 0 5px;
+	font-weight: normal;
+	}
+	
+form.cmxform fieldset fieldset label {
+	display: block;
+	width: auto;
+	}
+
+form.cmxform em {
+	font-weight: bold;
+	font-style: normal;
+	color: #f00;
+	}
+
+form.cmxform label { width: 120px; } /* Width of labels */
+form.cmxform fieldset fieldset label { margin-left: 123px; } /* Width plus 3 (html space) */
+
+/*\*//*/ form.cmxform legend { display: inline-block; } /* IE Mac legend fix */
+
+/**********************************
+
+Name: cmxform Styles
+Author: Nick Rigby 
+
+URL: //www.alistapart.com/d/prettyaccessibleforms/example_3/assets/css/cmxform.css
+
+***********************************/
+
+form.cmxform {
+	width: 370px;
+	font-size: 1.1em;
+	color: #333;
+	}
+	
+form.cmxform legend { padding-left: 0; }
+	
+form.cmxform legend,
+form.cmxform label { color: #333; }
+
+form.cmxform fieldset {
+	border: none;
+	border-top: 1px solid #C9DCA6;
+	background: url(../images/cmxform-fieldset.gif) left bottom repeat-x;
+	}
+	
+form.cmxform fieldset fieldset { background: none; }
+	
+form.cmxform fieldset li {
+	padding: 5px 10px 7px;
+	background: url(../images/cmxform-divider.gif) left bottom repeat-x;
+	}
+
+/* End cmxforms.css */
+
+/* Begin print.css */
+
+@media print {
+
+	div.print_only{
+		display: block;
+	}
+
+	span.print_only{
+		display: inline;
+	}
+
+	#footer{
+		display: none;
+	}
+
+}
+
+/* End print.css */

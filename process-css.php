@@ -82,7 +82,7 @@ if( isset($opts['p']) ){
 
 
 // Open source file that contains @import css directives
-$lines = file($file);
+$lines = file($input_directory.$input_file);
 
 // Initialize CSS
 $css = '';
@@ -100,7 +100,11 @@ if( $combine ){
 		if( preg_match('/^@import url\("?\'?([a-zA-Z0-9_\.\-]*)"?\'?\);/', $line, $matches) ){
 
 			// Append file contents to CSS string
-			$css .= file_get_contents($input_directory.$matches[1]);
+			$file_contents = file_get_contents($input_directory.$matches[1]);
+
+			$css .= '/* Begin '.$matches[1].' */'."\n\n";
+			$css .= trim($file_contents)."\n\n";
+			$css .= '/* End '.$matches[1].' */'."\n\n";
 
 			// If the "check URLs" option is selected, make requests for all absolute URLs found
 			// in the CSS. 
@@ -125,13 +129,14 @@ if( $combine ){
 	$css = str_replace('https://', "//", $css);
 
 	// Save CSS to file
+	$css = trim($css);
 	file_put_contents($output_file, $css);
 
 }else{
 
 	// If combination not requested, simply rename the file
 	// TODO: test this
-	$output_file = $file;
+	$output_file = $input_directory.$input_file;
 }
 
 // Minify CSS
@@ -147,7 +152,8 @@ if( $minify ){
 	exec($command);
 
 	// Add line breaks to minified CSS
-	$minified_lines = file($mini_file_output);
+	$lines = file($mini_file_output);
+	$minified_lines = $lines[0];
 	$updated_mini = str_replace('}', "}\n", $minified_lines);
 
 	// Fix media queries
@@ -155,6 +161,7 @@ if( $minify ){
 	$updated_mini = preg_replace('/(@media[^\{]*\{)(.*)/', "\$1\n$2", $updated_mini);
 
 	// Save minification to output file
+	$updated_mini = trim($updated_mini);
 	file_put_contents($mini_file_output, $updated_mini);
 }
 
@@ -166,6 +173,6 @@ if( $upload ){
 }
 
 // Display completion message
-print('Finished');
+print("Finished\n");
 
 ?>
