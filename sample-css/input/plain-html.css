@@ -1,0 +1,80 @@
+body{
+	background-color: transparent;
+	background-image: url('/assets/images/bg_body_noise.png');
+	color: #000;
+	font-family: 'Times New Roman', Times, Serif;
+	-webkit-text-size-adjust: none;
+}
+
+a,
+a:link,
+a:visited{
+	color: #27A6F7;
+	text-decoration: none;
+}
+
+a:hover,
+a:active{
+	color: #6CBEEF;
+}
+
+h1{
+	font-size: 2em;
+	line-height: 1em;
+	margin-bottom: 1em;
+	font-family: Futura, Helvetica, Sans-serif;
+	text-shadow: 0px 1px 0px #CCC;
+}
+
+h1 a{
+	color: #000 !important;
+}
+
+h2{
+	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 1em;
+	margin-bottom: 1em;
+}
+
+h3{
+	font-weight: bold;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+h4{
+	font-weight: bold;
+}
+
+strong{
+	font-weight: bold;
+}
+
+em{
+	font-style: italic;
+}
+
+strong em{
+	font-weight: bold;
+	font-style: italic;
+}
+
+p{
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+ol, ul{
+	list-style-position: inside;
+	padding-left: 1em;
+	margin-bottom: 1.5em;
+}
+
+ol{
+	list-style-type: decimal;
+}
+
+ul{
+	list-style-type: disc;
+}

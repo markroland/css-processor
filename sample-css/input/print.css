@@ -1,0 +1,15 @@
+@media print {
+
+	div.print_only{
+		display: block;
+	}
+
+	span.print_only{
+		display: inline;
+	}
+
+	#footer{
+		display: none;
+	}
+
+}
